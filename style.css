@@ -1,0 +1,338 @@
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  background: #02040a;
+  color: #f7d7c4;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 40px 20px;
+}
+
+/* KENTE BORDER */
+.kente-border {
+  height: 30px;
+  background-image: url("kente.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* SHIMMER EFFECT */
+.shimmer {
+  background: linear-gradient(90deg, #f7d7c4, #ffbfa8, #f7d7c4);
+  background-size: 200%;
+  animation: shimmer 4s infinite;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0,0,0,0.6);
+  border-bottom: 2px solid #f7d7c4;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ring-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px #f7d7c4);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: #f7d7c4;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffbfa8;
+  transform: scale(1.08);
+}
+
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #f7d7c4;
+}
+
+/* FLOATING RSVP BUTTON */
+.floating-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #f7d7c4;
+  color: #02040a;
+  padding: 15px 22px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 15px #f7d7c4;
+  animation: float 3s infinite ease-in-out;
+  z-index: 900;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+}
+
+.title {
+  font-size: 52px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* COUNTDOWN */
+.countdown {
+  font-size: 22px;
+  margin-bottom: 25px;
+  color: #ffbfa8;
+}
+
+/* SLIDESHOW */
+.slideshow-container {
+  max-width: 500px;
+  margin: auto;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 12px;
+  border: 3px solid #f7d7c4;
+}
+
+/* FLIP CARDS */
+.flip-section {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.flip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 220px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.flip-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-back {
+  background: #f7d7c4;
+  color: #02040a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* HOTEL SECTION */
+.hotel-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.hotel-card {
+  border: 2px solid #f7d7c4;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.hotel-card h3 {
+  margin: 0 0 10px;
+}
+
+.hotel-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background: #f7d7c4;
+  color: #02040a;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* GIFTING & REGISTRY */
+.gift-buttons,
+.registry-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.gift-btn,
+.registry-btn {
+  padding: 12px 20px;
+  background: #f7d7c4;
+  color: #02040a;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.gift-note {
+  margin-top: 15px;
+  font-style: italic;
+  text-align: center;
+}
+
+/* RSVP FORM */
+.rsvp-section {
+  text-align: center;
+}
+
+.rsvp-form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.rsvp-form input,
+.rsvp-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #f7d7c4;
+  background: transparent;
+  color: #f7d7c4;
+  font-family: inherit;
+}
+
+.rsvp-form textarea {
+  min-height: 100px;
+}
+
+.submit-btn {
+  padding: 12px;
+  background: #f7d7c4;
+  color: #02040a;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* FADE-IN ANIMATION */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE MENU */
+@media (max-width: 900px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #000;
+    flex-direction: column;
+    width: 220px;
+    padding: 15px 20px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
