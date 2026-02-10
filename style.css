@@ -122,6 +122,34 @@ section {
   margin-bottom: 20px;
 }
 
+.invitation-text {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.invite-title {
+  font-size: 26px;
+  color: #f7d7c4;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.invite-subtitle {
+  font-size: 18px;
+  color: #ffbfa8;
+  margin-bottom: 5px;
+}
+
+.invite-names {
+  font-size: 24px;
+  background: linear-gradient(90deg, #f7d7c4, #ffbfa8, #f7d7c4);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shimmer 4s infinite;
+  margin-top: 5px;
+}
+
 /* COUNTDOWN */
 .countdown {
   font-size: 22px;
