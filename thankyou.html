@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+
+  <style>
+    body {
+      background: #02040a;
+      color: #f7d7c4;
+      text-align: center;
+      padding: 100px 20px;
+      font-family: Georgia, serif;
+      overflow-x: hidden;
+      animation: fadeIn 2s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #f7d7c4, #ffbfa8, #f7d7c4);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: shimmer 4s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 0%; }
+      100% { background-position: 200%; }
+    }
+
+    p {
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background: #f7d7c4;
+      color: #02040a;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      box-shadow: 0 0 12px #f7d7c4;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ffbfa8;
+      transform: scale(1.05);
+    }
+
+    .confetti {
+      position: fixed;
+      top: -10px;
+      width: 10px;
+      height: 10px;
+      background-color: #f7d7c4;
+      opacity: 0.8;
+      animation: fall 3s linear infinite;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(120vh) rotate(360deg); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <script>
+    for (let i = 0; i < 40; i++) {
+      let confetti = document.createElement("div");
+      confetti.className = "confetti";
+      confetti.style.left = Math.random() * 100 + "vw";
+      confetti.style.animationDelay = Math.random() * 3 + "s";
+      confetti.style.backgroundColor = ["#f7d7c4", "#ffbfa8", "#ffd9c2"][Math.floor(Math.random()*3)];
+      document.body.appendChild(confetti);
+    }
+  </script>
+
+  <h1>Thank You!</h1>
+  <p>Your RSVP has been received. Charity & Kwaku can’t wait to celebrate with you.</p>
+
+  <a href="index.html" class="btn">Return to Website</a>
+  <a href="index.html#rsvp" class="btn">Return to RSVP</a>
+  <a href="event-details.pdf" class="btn" download>Download Event Details</a>
+
+</body>
+</html>
