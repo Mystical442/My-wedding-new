@@ -180,10 +180,18 @@
   <!-- RSVP -->
   <section id="rsvp" class="rsvp-section fade-in">
     <h2 class="section-title shimmer">RSVP</h2>
-    <form action="thankyou.html" method="GET" class="rsvp-form">
+
+    <form action="https://formsubmit.co/kwaku.impraim@yahoo.com" method="POST" class="rsvp-form">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="New Wedding RSVP!">
+      <input type="hidden" name="_template" value="table">
+      <!-- After you deploy, replace YOURDOMAIN with your real domain -->
+      <input type="hidden" name="_next" value="https://YOURDOMAIN.com/thankyou.html">
+
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="List all kids attendees"></textarea>
+      <textarea name="message" placeholder="List all attendees"></textarea>
+
       <button type="submit" class="submit-btn">Submit RSVP</button>
     </form>
   </section>
@@ -194,3 +202,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
