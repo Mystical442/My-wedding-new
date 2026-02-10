@@ -26,7 +26,7 @@ function showSlides() {
 }
 
 // COUNTDOWN TIMER
-const weddingDate = new Date("October 11, 2026 12:00:00").getTime();
+const weddingDate = new Date("October 10, 2026 12:00:00").getTime();
 const countdownEl = document.getElementById("countdown");
 
 if (countdownEl) {
@@ -47,3 +47,4 @@ if (countdownEl) {
     countdownEl.innerHTML = `${days} Days • ${hours} Hrs • ${minutes} Min • ${seconds} Sec`;
   }, 1000);
 }
+
