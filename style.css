@@ -14,7 +14,7 @@ section {
 /* KENTE BORDER */
 .kente-border {
   height: 30px;
-  background-image: url("kente.jpg");
+  background-image: url("kente.png");
   background-size: cover;
   background-position: center;
 }
