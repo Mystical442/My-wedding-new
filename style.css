@@ -23,9 +23,9 @@ section {
 .shimmer {
   background: linear-gradient(90deg, #f7d7c4, #ffbfa8, #f7d7c4);
   background-size: 200%;
-  animation: shimmer 4s infinite;
   -webkit-background-clip: text;
   color: transparent;
+  animation: shimmer 4s infinite;
 }
 
 @keyframes shimmer {
@@ -67,15 +67,10 @@ section {
   padding: 0;
 }
 
-.nav-links li {
-  list-style: none;
-}
-
 .nav-links a {
   color: #f7d7c4;
   text-decoration: none;
   font-size: 16px;
-  letter-spacing: 0.5px;
   transition: 0.3s;
 }
 
@@ -223,10 +218,6 @@ section {
   text-align: center;
 }
 
-.hotel-card h3 {
-  margin: 0 0 10px;
-}
-
 .hotel-btn {
   display: inline-block;
   margin-top: 10px;
@@ -336,3 +327,4 @@ section {
     display: block;
   }
 }
+
