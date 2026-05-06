@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Charity and Kwaku celebration illustration</title>
+  <desc id="desc">An illustrated wedding celebration scene with two figures framed by kente cloth patterns.</desc>
+  <defs>
+    <radialGradient id="glow" cx=".5" cy=".35" r=".72">
+      <stop offset="0" stop-color="#f4d176" stop-opacity=".42"/>
+      <stop offset=".52" stop-color="#5d2116"/>
+      <stop offset="1" stop-color="#16100d"/>
+    </radialGradient>
+    <pattern id="kente" width="84" height="84" patternUnits="userSpaceOnUse">
+      <rect width="84" height="84" fill="#f4d176"/>
+      <path d="M0 0h84v14H0zM0 35h84v14H0zM0 70h84v14H0z" fill="#204939"/>
+      <path d="M14 0h14v84H14zM56 0h14v84H56z" fill="#a64623"/>
+      <path d="M28 14h28v21H28zM28 49h28v21H28z" fill="#21150f" opacity=".82"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="26" stdDeviation="22" flood-color="#080504" flood-opacity=".48"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#glow)"/>
+  <path d="M105 120c139-70 256-72 351-7s207 68 336 7 232-62 309 0v560H105z" fill="#fff4dc" opacity=".08"/>
+  <path d="M72 94h1056v80H72zM72 626h1056v80H72z" fill="url(#kente)" opacity=".92"/>
+  <g fill="none" stroke="#f4d176" stroke-width="5" opacity=".52">
+    <path d="M250 268c115-104 235-154 360-150s240 58 345 163"/>
+    <path d="M292 344c98-80 201-119 309-116s206 45 297 125"/>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M285 654c28-138 107-230 229-230 124 0 205 92 233 230z" fill="url(#kente)"/>
+    <path d="M415 405c-52-25-83-76-80-138 4-78 67-138 146-134 79 4 138 68 134 146-3 62-40 110-95 130v68H415z" fill="#22120d"/>
+    <circle cx="475" cy="286" r="86" fill="#60392a"/>
+    <path d="M342 654c35-98 90-148 166-148 75 0 131 50 168 148z" fill="#fff4dc"/>
+    <path d="M386 548h244v58H386z" fill="url(#kente)" opacity=".9"/>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M555 654c31-146 117-244 251-244 132 0 220 98 251 244z" fill="#204939"/>
+    <path d="M704 394c-55-30-86-84-78-148 10-82 79-139 161-129s137 80 127 162c-8 62-49 110-107 128v72H704z" fill="#17100d"/>
+    <circle cx="768" cy="285" r="88" fill="#60392a"/>
+    <path d="M628 654c35-110 96-168 184-168 87 0 148 58 183 168z" fill="#f4d176"/>
+    <path d="M684 520h252v62H684z" fill="url(#kente)" opacity=".92"/>
+  </g>
+  <path d="M268 654h676" stroke="#f0b29b" stroke-width="8" stroke-linecap="round" opacity=".58"/>
+</svg>
