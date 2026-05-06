@@ -478,21 +478,36 @@ a {
 .slideshow-frame {
   position: relative;
   overflow: hidden;
-  min-height: clamp(380px, 58vw, 620px);
+  min-height: clamp(560px, 70vw, 760px);
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 244, 220, 0.06);
-  box-shadow: var(--shadow);
+  background:
+    linear-gradient(145deg, rgba(255, 244, 220, 0.1), rgba(255, 244, 220, 0.025)),
+    rgba(22, 16, 13, 0.78);
+  box-shadow: 0 34px 90px rgba(7, 5, 3, 0.48);
+}
+
+.slideshow-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(22, 16, 13, 0.12), transparent 34%, rgba(22, 16, 13, 0.58)),
+    radial-gradient(circle at 16% 18%, rgba(244, 209, 118, 0.22), transparent 30rem);
+  mix-blend-mode: multiply;
 }
 
 .slideshow-frame::after {
   content: "";
   position: absolute;
-  inset: 18px;
-  border: 1px solid rgba(255, 244, 220, 0.24);
+  inset: clamp(14px, 2vw, 22px);
+  border: 1px solid rgba(255, 244, 220, 0.32);
   border-radius: 6px;
   pointer-events: none;
   z-index: 3;
+  box-shadow: inset 0 0 0 1px rgba(215, 169, 76, 0.14);
 }
 
 .couple-slide {
@@ -500,11 +515,12 @@ a {
   inset: 0;
   margin: 0;
   opacity: 0;
-  animation: coupleSlideshow 10s ease-in-out infinite;
+  transform: scale(1.02);
+  animation: coupleSlideshow 12s cubic-bezier(0.45, 0, 0.2, 1) infinite;
 }
 
 .slide-two {
-  animation-delay: 5s;
+  animation-delay: 6s;
 }
 
 .couple-slide img {
@@ -512,40 +528,48 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 38%;
+  filter: saturate(1.04) contrast(1.04) brightness(0.98);
+}
+
+.slide-two img {
+  object-position: center 44%;
 }
 
 .couple-slide figcaption {
   position: absolute;
   left: clamp(22px, 4vw, 44px);
   bottom: clamp(22px, 4vw, 44px);
+  z-index: 4;
   max-width: min(480px, calc(100% - 44px));
   padding: 14px 18px;
   border-left: 3px solid var(--gold);
   color: var(--cream);
-  background: rgba(22, 16, 13, 0.72);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, rgba(22, 16, 13, 0.82), rgba(93, 33, 22, 0.66));
+  backdrop-filter: blur(14px);
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: clamp(1.8rem, 4vw, 3.3rem);
   font-weight: 700;
   line-height: 1;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.26);
 }
 
 @keyframes coupleSlideshow {
-  0%,
+  0% {
+    opacity: 0;
+    transform: scale(1.045);
+  }
+
+  8%,
   44% {
     opacity: 1;
     transform: scale(1);
   }
 
-  50%,
-  94% {
-    opacity: 0;
-    transform: scale(1.035);
-  }
-
+  52%,
   100% {
-    opacity: 1;
-    transform: scale(1);
+    opacity: 0;
+    transform: scale(1.045);
   }
 }
 
@@ -855,7 +879,7 @@ a {
   }
 
   .slideshow-frame {
-    min-height: clamp(340px, 74vw, 520px);
+    min-height: clamp(500px, 88vw, 680px);
   }
 }
 
@@ -947,6 +971,15 @@ a {
 
   .hero-ring {
     width: 120px;
+  }
+
+  .slideshow-frame {
+    min-height: clamp(460px, 132vw, 620px);
+  }
+
+  .couple-slide img,
+  .slide-two img {
+    object-position: center center;
   }
 
   .countdown span {
