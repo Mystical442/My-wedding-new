@@ -3,208 +3,225 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charity Asiedu & Kwaku Impraim • Traditional Wedding Invitation</title>
+  <title>Charity Asiedu & Kwaku Impraim | Traditional Wedding 2026</title>
+  <meta name="description" content="Traditional wedding invitation for Charity Asiedu and Kwaku Impraim on October 10, 2026 in Chesapeake, Virginia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div class="kente-border top" aria-hidden="true"></div>
 
-  <!-- KENTE BORDER -->
-  <div class="kente-border top"></div>
+  <nav class="navbar" aria-label="Primary navigation">
+    <a class="brand" href="#home" aria-label="Charity and Kwaku wedding home">
+      <img src="Ring.png" alt="" class="ring-icon">
+      <span class="brand-mark">C & K</span>
+      <span class="brand-year">2026</span>
+    </a>
 
-  <!-- NAVIGATION -->
-  <nav class="navbar">
-    <div class="logo-container">
-      <img src="ring.png" alt="Wedding Ring" class="ring-icon">
-      <div class="logo shimmer">C & K 2026</div>
-    </div>
+    <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-    <ul class="nav-links">
+    <ul class="nav-links" id="primary-menu">
       <li><a href="#home">Home</a></li>
-      <li><a href="#bridesmaids">Bridesmaids</a></li>
-      <li><a href="#groomsmen">Groomsmen</a></li>
-      <li><a href="#stay">Where to Stay</a></li>
+      <li><a href="#party">Wedding Party</a></li>
+      <li><a href="#stay">Stay</a></li>
       <li><a href="#gifting">Gifting</a></li>
       <li><a href="#registry">Registry</a></li>
       <li><a href="#rsvp">RSVP</a></li>
     </ul>
-
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
   </nav>
 
-  <!-- FLOATING RSVP BUTTON -->
   <a href="#rsvp" class="floating-btn">RSVP</a>
 
-  <!-- HERO SECTION -->
-  <section id="home" class="hero fade-in">
-    <h1 class="title shimmer">Charity & Kwaku's</h1>
-    <div class="invitation-text fade-in">
-  <h2 class="invite-title">Traditional Wedding Invitation</h2>
-  <p class="invite-subtitle">You are warmly invited to the Traditional wedding of</p>
-  <h3 class="invite-names">Charity Asiedu & Kwaku Impraim</h3>
-  <p class="invite-venue">October 10, 2026 • 700 Conference Center Drive, Chesapeake, VA 23320</p>    
-</div>
-
-    <!-- COUNTDOWN -->
-    <div id="countdown" class="countdown"></div>
-
-    <!-- SLIDESHOW -->
-    <div class="slideshow-container">
-      <div class="slide fade"><img src="couple1.jpg" alt="Couple 1"></div>
-      <div class="slide fade"><img src="couple2.jpg" alt="Couple 2"></div>
-      <div class="slide fade"><img src="couple3.jpg" alt="Couple 3"></div>
-      <div class="slide fade"><img src="couple4.jpg" alt="Couple 4"></div>
-      <div class="slide fade"><img src="couple5.jpg" alt="Couple 5"></div>
-    </div>
-  </section>
-
-  <!-- BRIDESMAIDS -->
-  <section id="bridesmaids" class="flip-section fade-in">
-    <h2 class="section-title shimmer">Bridesmaids</h2>
-    <div class="flip-grid">
-      <div class="flip-card"><div class="flip-inner">
-        <div class="flip-front"><img src="bridesmaid1.jpg" alt="Bridesmaid 1"></div>
-        <div class="flip-back"><p>Bridesmaid 1</p></div>
-      </div></div>
-
-      <div class="flip-card"><div class="flip-inner">
-        <div class="flip-front"><img src="bridesmaid2.jpg" alt="Bridesmaid 2"></div>
-        <div class="flip-back"><p>Bridesmaid 2</p></div>
-      </div></div>
-
-      <div class="flip-card"><div class="flip-inner">
-        <div class="flip-front"><img src="bridesmaid3.jpg" alt="Bridesmaid 3"></div>
-        <div class="flip-back"><p>Bridesmaid 3</p></div>
-      </div></div>
-
-      <div class="flip-card"><div class="flip-inner">
-        <div class="flip-front"><img src="bridesmaid4.jpg" alt="Bridesmaid 4"></div>
-        <div class="flip-back"><p>Bridesmaid 4</p></div>
-      </div></div>
-
-      <div class="flip-card"><div class="flip-inner">
-        <div class="flip-front"><img src="bridesmaid5.jpg" alt="Bridesmaid 5"></div>
-        <div class="flip-back"><p>Bridesmaid 5</p></div>
-      </div></div>
-    </div>
-  </section>
-
-  <!-- GROOMSMEN -->
-  <section id="groomsmen" class="flip-section fade-in">
-    <h2 class="section-title shimmer">Groomsmen</h2>
-    <div class="flip-grid">
-      <div class="flip-card"><div class="flip-inner">
-        <div class="flip-front"><img src="groomsman1.jpg" alt="Groomsman 1"></div>
-        <div class="flip-back"><p>Groomsman 1</p></div>
-      </div></div>
-
-      <div class="flip-card"><div class="flip-inner">
-        <div class="flip-front"><img src="groomsman2.jpg" alt="Groomsman 2"></div>
-        <div class="flip-back"><p>Groomsman 2</p></div>
-      </div></div>
-
-      <div class="flip-card"><div class="flip-inner">
-        <div class="flip-front"><img src="groomsman3.jpg" alt="Groomsman 3"></div>
-        <div class="flip-back"><p>Groomsman 3</p></div>
-      </div></div>
-
-      <div class="flip-card"><div class="flip-inner">
-        <div class="flip-front"><img src="groomsman4.jpg" alt="Groomsman 4"></div>
-        <div class="flip-back"><p>Groomsman 4</p></div>
-      </div></div>
-
-      <div class="flip-card"><div class="flip-inner">
-        <div class="flip-front"><img src="groomsman5.jpg" alt="Groomsman 5"></div>
-        <div class="flip-back"><p>Groomsman 5</p></div>
-      </div></div>
-    </div>
-  </section>
-
-  <!-- WHERE TO STAY -->
-  <section id="stay" class="fade-in">
-    <h2 class="section-title shimmer">Where to Stay</h2>
-
-    <div class="hotel-list">
-      <div class="hotel-card">
-        <h3>Delta Hotels by Marriott Chesapeake Norfolk</h3>
-        <p>0.2 miles from venue</p>
-        <a href="https://www.marriott.com/en-us/hotels/orfdt-delta-hotels-chesapeake-norfolk/overview/" target="_blank" class="hotel-btn">View Hotel</a>
+  <main>
+    <section id="home" class="hero section-shell reveal">
+      <div class="hero-copy">
+        <p class="eyebrow">Traditional Wedding Invitation</p>
+        <h1>Charity Asiedu<br>& Kwaku Impraim</h1>
+        <p class="hero-date">October 10, 2026</p>
+        <p class="hero-location">700 Conference Center Drive, Chesapeake, VA 23320</p>
+        <div class="hero-actions" aria-label="Wedding actions">
+          <a class="primary-action" href="#rsvp">Reserve Your Seat</a>
+          <a class="secondary-action" href="#stay">Plan Your Stay</a>
+        </div>
       </div>
 
-      <div class="hotel-card">
-        <h3>Hampton Inn & Suites Chesapeake-Battlefield Blvd</h3>
-        <p>1.1 miles from venue</p>
-        <a href="https://www.hilton.com/en/hotels/orfcbhx-hampton-suites-chesapeake-battlefield-blvd/" target="_blank" class="hotel-btn">View Hotel</a>
+      <div class="hero-art" aria-label="Ceremonial wedding artwork">
+        <div class="kente-panel"></div>
+        <div class="monogram-orbit">
+          <span>C</span>
+          <img src="Ring.png" alt="" class="hero-ring">
+          <span>K</span>
+        </div>
+        <p>Family, tradition, and joy in full color</p>
+      </div>
+    </section>
+
+    <section class="countdown-band section-shell reveal" aria-label="Countdown to wedding day">
+      <div>
+        <p class="eyebrow">The celebration begins in</p>
+        <h2>Counting down to October 10</h2>
+      </div>
+      <div id="countdown" class="countdown" aria-live="polite">
+        <span><strong>000</strong><em>Days</em></span>
+        <span><strong>00</strong><em>Hours</em></span>
+        <span><strong>00</strong><em>Minutes</em></span>
+        <span><strong>00</strong><em>Seconds</em></span>
+      </div>
+    </section>
+
+    <section class="details-grid section-shell reveal" aria-label="Wedding details">
+      <article class="detail-card featured">
+        <p class="eyebrow">Ceremony</p>
+        <h2>Traditional wedding celebration</h2>
+        <p>Join Charity and Kwaku for a day shaped by Ghanaian heritage, family blessings, music, and a joyful reception.</p>
+      </article>
+      <article class="detail-card">
+        <p class="eyebrow">Date</p>
+        <h3>Saturday, October 10, 2026</h3>
+        <p>Guests are encouraged to arrive early and settle in before the ceremony begins.</p>
+      </article>
+      <article class="detail-card">
+        <p class="eyebrow">Venue</p>
+        <h3>Chesapeake Conference Center</h3>
+        <p>700 Conference Center Drive, Chesapeake, Virginia 23320.</p>
+      </article>
+    </section>
+
+    <section id="party" class="party-section section-shell reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Honor Table</p>
+        <h2>Wedding Party</h2>
       </div>
 
-      <div class="hotel-card">
-        <h3>Comfort Suites Chesapeake - Norfolk</h3>
-        <p>1.3 miles from venue</p>
-        <a href="https://www.choicehotels.com/virginia/chesapeake/comfort-suites-hotels/va563" target="_blank" class="hotel-btn">View Hotel</a>
+      <div class="party-lanes">
+        <div>
+          <h3>Bridesmaids</h3>
+          <div class="flip-grid">
+            <button class="flip-card" type="button"><span class="flip-inner"><span class="flip-front">B1</span><span class="flip-back">Bridesmaid 1</span></span></button>
+            <button class="flip-card" type="button"><span class="flip-inner"><span class="flip-front">B2</span><span class="flip-back">Bridesmaid 2</span></span></button>
+            <button class="flip-card" type="button"><span class="flip-inner"><span class="flip-front">B3</span><span class="flip-back">Bridesmaid 3</span></span></button>
+            <button class="flip-card" type="button"><span class="flip-inner"><span class="flip-front">B4</span><span class="flip-back">Bridesmaid 4</span></span></button>
+            <button class="flip-card" type="button"><span class="flip-inner"><span class="flip-front">B5</span><span class="flip-back">Bridesmaid 5</span></span></button>
+          </div>
+        </div>
+
+        <div>
+          <h3>Groomsmen</h3>
+          <div class="flip-grid">
+            <button class="flip-card" type="button"><span class="flip-inner"><span class="flip-front">G1</span><span class="flip-back">Groomsman 1</span></span></button>
+            <button class="flip-card" type="button"><span class="flip-inner"><span class="flip-front">G2</span><span class="flip-back">Groomsman 2</span></span></button>
+            <button class="flip-card" type="button"><span class="flip-inner"><span class="flip-front">G3</span><span class="flip-back">Groomsman 3</span></span></button>
+            <button class="flip-card" type="button"><span class="flip-inner"><span class="flip-front">G4</span><span class="flip-back">Groomsman 4</span></span></button>
+            <button class="flip-card" type="button"><span class="flip-inner"><span class="flip-front">G5</span><span class="flip-back">Groomsman 5</span></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stay" class="section-shell reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Near the venue</p>
+        <h2>Where to Stay</h2>
       </div>
 
-      <div class="hotel-card">
-        <h3>Hilton Garden Inn Chesapeake/Greenbrier</h3>
-        <p>1.5 miles from venue</p>
-        <a href="https://www.hilton.com/en/hotels/orfchgi-hilton-garden-inn-chesapeake-greenbrier/" target="_blank" class="hotel-btn">View Hotel</a>
+      <div class="hotel-list">
+        <article class="hotel-card">
+          <span>0.2 mi</span>
+          <h3>Delta Hotels by Marriott Chesapeake Norfolk</h3>
+          <a href="https://www.marriott.com/en-us/hotels/orfdt-delta-hotels-chesapeake-norfolk/overview/" target="_blank" rel="noopener" class="text-link">View Hotel</a>
+        </article>
+        <article class="hotel-card">
+          <span>1.1 mi</span>
+          <h3>Hampton Inn & Suites Chesapeake-Battlefield Blvd</h3>
+          <a href="https://www.hilton.com/en/hotels/orfcbhx-hampton-suites-chesapeake-battlefield-blvd/" target="_blank" rel="noopener" class="text-link">View Hotel</a>
+        </article>
+        <article class="hotel-card">
+          <span>1.3 mi</span>
+          <h3>Comfort Suites Chesapeake - Norfolk</h3>
+          <a href="https://www.choicehotels.com/virginia/chesapeake/comfort-suites-hotels/va563" target="_blank" rel="noopener" class="text-link">View Hotel</a>
+        </article>
+        <article class="hotel-card">
+          <span>1.5 mi</span>
+          <h3>Hilton Garden Inn Chesapeake/Greenbrier</h3>
+          <a href="https://www.hilton.com/en/hotels/orfchgi-hilton-garden-inn-chesapeake-greenbrier/" target="_blank" rel="noopener" class="text-link">View Hotel</a>
+        </article>
+        <article class="hotel-card">
+          <span>1.6 mi</span>
+          <h3>Aloft Chesapeake</h3>
+          <a href="https://www.marriott.com/en-us/hotels/orfal-aloft-chesapeake/overview/" target="_blank" rel="noopener" class="text-link">View Hotel</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="gifting" class="split-section section-shell reveal">
+      <div>
+        <p class="eyebrow">With gratitude</p>
+        <h2>Gifting</h2>
+        <p>Your presence is the greatest gift. For guests who wish to bless the couple, these options are available.</p>
+      </div>
+      <div class="button-stack">
+        <a href="https://www.zellepay.com/" target="_blank" rel="noopener" class="gift-btn">Send via Zelle</a>
+        <a href="https://cash.app/" target="_blank" rel="noopener" class="gift-btn">Send via Cash App</a>
+      </div>
+    </section>
+
+    <section id="registry" class="split-section section-shell reveal">
+      <div>
+        <p class="eyebrow">Home blessings</p>
+        <h2>Registry</h2>
+        <p>Registry links are gathered here so guests can choose what feels most meaningful and convenient.</p>
+      </div>
+      <div class="button-stack">
+        <a href="https://www.amazon.com/wedding" target="_blank" rel="noopener" class="registry-btn">Amazon Registry</a>
+        <a href="https://www.target.com/gift-registry" target="_blank" rel="noopener" class="registry-btn">Target Registry</a>
+        <a href="https://www.walmart.com/cp/wedding-registry/1094765" target="_blank" rel="noopener" class="registry-btn">Walmart Registry</a>
+      </div>
+    </section>
+
+    <section id="rsvp" class="rsvp-section section-shell reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Be part of the day</p>
+        <h2>RSVP</h2>
       </div>
 
-      <div class="hotel-card">
-        <h3>Aloft Chesapeake</h3>
-        <p>1.6 miles from venue</p>
-        <a href="https://www.marriott.com/en-us/hotels/orfal-aloft-chesapeake/overview/" target="_blank" class="hotel-btn">View Hotel</a>
-      </div>
-    </div>
-  </section>
+      <form name="wedding-rsvp" method="POST" action="/thankyou.html" data-netlify="true" netlify-honeypot="bot-field" class="rsvp-form" id="rsvp-form">
+        <input type="hidden" name="form-name" value="wedding-rsvp">
+        <p class="hidden-field">
+          <label>Do not fill this out: <input name="bot-field"></label>
+        </p>
 
-  <!-- GIFTING -->
-  <section id="gifting" class="fade-in">
-    <h2 class="section-title shimmer">Gifting</h2>
+        <label>
+          <span>Your name</span>
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>
+          <span>Number attending</span>
+          <input type="number" name="attendees" min="1" max="12" value="1" required>
+        </label>
+        <label class="wide-field">
+          <span>Guest names or note</span>
+          <textarea name="message" placeholder="List all attendees or share a note"></textarea>
+        </label>
 
-    <div class="gift-buttons">
-      <a href="https://www.zellepay.com/" target="_blank" class="gift-btn">Send via Zelle</a>
-      <a href="https://cash.app/" target="_blank" class="gift-btn">Send via CashApp</a>
-    </div>
+        <button type="submit" class="submit-btn">Submit RSVP</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
 
-    <p class="gift-note">
-      Your presence is the greatest gift, but if you wish to bless us, here are our preferred options.
-    </p>
-  </section>
-
-  <!-- REGISTRY -->
-  <section id="registry" class="fade-in">
-    <h2 class="section-title shimmer">Registry</h2>
-
-    <div class="registry-buttons">
-      <a href="https://www.amazon.com/wedding" target="_blank" class="registry-btn">Amazon Registry</a>
-      <a href="https://www.target.com/gift-registry" target="_blank" class="registry-btn">Target Registry</a>
-      <a href="https://www.walmart.com/cp/wedding-registry/1094765" target="_blank" class="registry-btn">Walmart Registry</a>
-    </div>
-  </section>
-
-  <!-- RSVP -->
-  <section id="rsvp" class="rsvp-section fade-in">
-    <h2 class="section-title shimmer">RSVP</h2>
-
-    <form action="https://formsubmit.co/kwaku.impraim@yahoo.com" method="POST" class="rsvp-form">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="New Wedding RSVP!">
-      <input type="hidden" name="_template" value="table">
-      <!-- After you deploy, replace YOURDOMAIN with your real domain -->
-      <input type="hidden" name="_next" value="https://YOURDOMAIN.com/thankyou.html">
-
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="List all attendees"></textarea>
-
-      <button type="submit" class="submit-btn">Submit RSVP</button>
-    </form>
-  </section>
-
-  <!-- KENTE BORDER -->
-  <div class="kente-border bottom"></div>
+  <div class="kente-border bottom" aria-hidden="true"></div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
