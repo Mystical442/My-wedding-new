@@ -2,6 +2,15 @@ const menuButton = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav-links");
 const navAnchors = document.querySelectorAll(".nav-links a");
 
+if (window.matchMedia("(pointer: fine)").matches) {
+  window.addEventListener("pointermove", (event) => {
+    const x = Math.round((event.clientX / window.innerWidth) * 100);
+    const y = Math.round((event.clientY / window.innerHeight) * 100);
+    document.documentElement.style.setProperty("--cursor-x", `${x}%`);
+    document.documentElement.style.setProperty("--cursor-y", `${y}%`);
+  });
+}
+
 function closeMenu() {
   if (!menuButton || !navLinks) return;
   navLinks.classList.remove("active");
