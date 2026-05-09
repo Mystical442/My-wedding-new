@@ -30,6 +30,12 @@ if (menuButton && navLinks) {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") closeMenu();
   });
+
+  document.addEventListener("click", (event) => {
+    if (!navLinks.classList.contains("active")) return;
+    if (navLinks.contains(event.target) || menuButton.contains(event.target)) return;
+    closeMenu();
+  });
 }
 
 const weddingDate = new Date("2026-10-10T12:00:00-04:00").getTime();

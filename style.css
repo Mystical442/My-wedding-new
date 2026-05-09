@@ -1454,59 +1454,57 @@ body {
 }
 
 .menu-btn {
-  display: none;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
 }
 
 .nav-links {
   position: fixed;
-  top: auto;
+  top: 82px;
   right: max(10px, calc((100vw - var(--app-width)) / 2 + 12px));
-  bottom: 12px;
-  left: max(10px, calc((100vw - var(--app-width)) / 2 + 12px));
+  left: auto;
   z-index: 30;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 4px;
-  min-height: var(--tab-height);
-  padding: 8px;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  width: min(240px, calc(100vw - 28px));
+  padding: 10px;
   border: 1px solid rgba(244, 209, 118, 0.38);
-  border-radius: 24px;
-  background: rgba(27, 16, 11, 0.9);
+  border-radius: 8px;
+  background: rgba(27, 16, 11, 0.96);
   box-shadow: 0 18px 54px rgba(0, 0, 0, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(18px);
   list-style: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.nav-links.active {
   opacity: 1;
   pointer-events: auto;
-  transform: none;
+  transform: translateY(0);
 }
 
 .nav-links a {
-  display: grid;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   min-width: 0;
-  min-height: 58px;
-  place-items: center;
-  padding: 8px 4px;
-  border-radius: 18px;
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: 6px;
   color: rgba(255, 244, 220, 0.68);
-  font-size: 0.68rem;
-  line-height: 1;
-  text-align: center;
+  font-size: 0.84rem;
+  line-height: 1.2;
+  text-align: left;
 }
 
 .nav-links a::before {
-  display: block;
-  margin-bottom: 7px;
-  color: var(--sun);
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.34rem;
-  line-height: 0.8;
+  display: none;
 }
-
-.nav-links li:nth-child(1) a::before { content: "C&K"; font-size: 1rem; }
-.nav-links li:nth-child(2) a::before { content: "II"; }
-.nav-links li:nth-child(3) a::before { content: "IN"; }
-.nav-links li:nth-child(4) a::before { content: "$"; }
-.nav-links li:nth-child(5) a::before { content: "YES"; font-size: 0.9rem; }
 
 .nav-links a::after {
   display: none;
@@ -1523,13 +1521,13 @@ body {
 
 .floating-btn {
   right: max(22px, calc((100vw - var(--app-width)) / 2 + 22px));
-  bottom: calc(var(--tab-height) + 30px);
+  bottom: 30px;
   min-height: 48px;
   padding: 0 18px;
 }
 
 main {
-  padding-bottom: calc(var(--tab-height) + 22px);
+  padding-bottom: 22px;
 }
 
 .section-shell {
