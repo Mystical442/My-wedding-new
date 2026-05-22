@@ -1,3 +1,11 @@
+const splash = document.getElementById("splash");
+if (splash) {
+  setTimeout(() => {
+    splash.classList.add("fade-out");
+    splash.addEventListener("transitionend", () => splash.remove(), { once: true });
+  }, 2800);
+}
+
 const menuButton = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav-links");
 const navAnchors = document.querySelectorAll(".nav-links a");
@@ -120,25 +128,84 @@ const formStatus = document.getElementById("form-status");
 
 if (rsvpForm && formStatus) {
   rsvpForm.addEventListener("submit", async (event) => {
-    if (!window.fetch) return;
-
     event.preventDefault();
     formStatus.textContent = "Sending RSVP...";
 
+    const formData = new FormData(rsvpForm);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      attendees: Number(formData.get("attendees")) || 1,
+      message: formData.get("message") || "",
+    };
+
     try {
-      const body = new URLSearchParams(new FormData(rsvpForm)).toString();
-      const response = await fetch("/", {
+      const response = await fetch("/api/rsvp", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
       });
 
-      if (!response.ok) throw new Error("Submission failed");
+      const result = await response.json();
+
+      if (!response.ok) throw new Error(result.error || "Submission failed");
 
       rsvpForm.reset();
-      formStatus.textContent = "Thank you. Your RSVP has been received.";
+      formStatus.textContent = result.updated
+        ? "Your RSVP has been updated. Thank you!"
+        : "Thank you! Your RSVP has been received.";
     } catch (error) {
-      formStatus.textContent = "Your RSVP could not be sent here. Please try again in a moment.";
+      try {
+        const body = new URLSearchParams(new FormData(rsvpForm)).toString();
+        await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body,
+        });
+        rsvpForm.reset();
+        formStatus.textContent = "Thank you. Your RSVP has been received.";
+      } catch {
+        formStatus.textContent = "Your RSVP could not be sent. Please try again in a moment.";
+      }
+    }
+  });
+}
+
+const shareNativeBtn = document.getElementById("share-native");
+const shareCopyBtn = document.getElementById("share-copy");
+const shareStatus = document.getElementById("share-status");
+
+const shareData = {
+  title: "Charity & Kwaku's Wedding",
+  text: "You're invited to the traditional wedding of Charity Asiedu & Kwaku Impraim on October 10, 2026!",
+  url: window.location.href.split("?")[0].split("#")[0],
+};
+
+if (shareNativeBtn) {
+  if (navigator.share) {
+    shareNativeBtn.addEventListener("click", async () => {
+      try {
+        await navigator.share(shareData);
+        if (shareStatus) shareStatus.textContent = "Invitation shared!";
+      } catch (err) {
+        if (err.name !== "AbortError" && shareStatus) {
+          shareStatus.textContent = "";
+        }
+      }
+    });
+  } else {
+    shareNativeBtn.style.display = "none";
+  }
+}
+
+if (shareCopyBtn) {
+  shareCopyBtn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(shareData.url);
+      if (shareStatus) shareStatus.textContent = "Link copied to clipboard!";
+      setTimeout(() => { if (shareStatus) shareStatus.textContent = ""; }, 3000);
+    } catch {
+      if (shareStatus) shareStatus.textContent = "Could not copy link.";
     }
   });
 }
