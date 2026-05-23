@@ -12,6 +12,16 @@
 </head>
 
 <body>
+  <div class="splash-overlay" id="splash" aria-hidden="true">
+    <div class="splash-inner">
+      <div class="splash-ring"><img src="Ring.png" alt=""></div>
+      <p class="splash-eyebrow">You are invited to the wedding of</p>
+      <h1 class="splash-names">Charity<br><span>&</span><br>Kwaku</h1>
+      <p class="splash-date">October 10, 2026</p>
+      <div class="splash-kente"></div>
+    </div>
+  </div>
+
   <div class="kente-border top" aria-hidden="true"></div>
 
   <nav class="navbar" aria-label="Primary navigation">
@@ -210,6 +220,25 @@
         <a href="#" class="gift-btn" onclick="alert('send zelle to: charityasiedu1991@gmail.com');" target="_blank" rel="noopener">Send via Zelle</a>
         <a href="https://cash.app/$nanaamaAs" target="_blank" rel="noopener" class="gift-btn">Send via Cash App</a>
       </div>
+    </section>
+
+    <section class="share-section section-shell reveal" aria-label="Share the invitation">
+      <div class="section-heading">
+        <p class="eyebrow">Spread the word</p>
+        <h2>Share This Invitation</h2>
+      </div>
+      <p class="share-copy">Help us celebrate — share this invitation with friends and family.</p>
+      <div class="share-actions">
+        <button type="button" class="share-btn share-native" id="share-native" aria-label="Share invitation">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          Share Invitation
+        </button>
+        <button type="button" class="share-btn share-copy" id="share-copy" aria-label="Copy invitation link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copy Link
+        </button>
+      </div>
+      <p class="share-status" id="share-status" role="status" aria-live="polite"></p>
     </section>
 
     <section id="rsvp" class="rsvp-section section-shell reveal">

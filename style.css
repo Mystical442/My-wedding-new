@@ -1,3 +1,167 @@
+.splash-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(244, 209, 118, 0.18), transparent 30rem),
+    radial-gradient(circle at 70% 80%, rgba(183, 47, 87, 0.16), transparent 28rem),
+    linear-gradient(135deg, #1a0f0b 0%, #32130d 40%, #14261e 75%, #211126 100%);
+  opacity: 1;
+  transition: opacity 800ms ease, visibility 800ms ease;
+}
+
+.splash-overlay.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.splash-inner {
+  text-align: center;
+  animation: splashReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.splash-ring {
+  animation: splashRingDrop 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
+}
+
+.splash-ring img {
+  width: min(140px, 32vw);
+  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.4));
+}
+
+.splash-eyebrow {
+  margin: 18px 0 0;
+  color: #f4d176;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: splashTextUp 0.8s ease 0.5s both;
+}
+
+.splash-names {
+  margin: 12px 0 0;
+  font-family: "Cinzel Decorative", Georgia, serif;
+  font-size: clamp(3rem, 12vw, 6.5rem);
+  font-weight: 700;
+  line-height: 0.88;
+  color: #fff4dc;
+  text-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  animation: splashTextUp 1s ease 0.7s both;
+}
+
+.splash-names span {
+  display: block;
+  color: #d7a94c;
+  font-size: 0.55em;
+  line-height: 1.6;
+}
+
+.splash-date {
+  margin: 16px 0 0;
+  color: #f0b29b;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  font-weight: 700;
+  opacity: 0;
+  animation: splashTextUp 0.8s ease 1s both;
+}
+
+.splash-kente {
+  width: min(280px, 68vw);
+  height: 28px;
+  margin: 24px auto 0;
+  background-image: url("kente.png");
+  background-size: 180px auto;
+  background-position: center;
+  opacity: 0;
+  animation: splashTextUp 0.7s ease 1.2s both, kenteSlide 24s linear 1.2s infinite;
+}
+
+@keyframes splashReveal {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes splashRingDrop {
+  from { opacity: 0; transform: translateY(-30px) scale(0.7) rotate(-20deg); }
+  to { opacity: 1; transform: translateY(0) scale(1) rotate(0deg); }
+}
+
+@keyframes splashTextUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.share-section {
+  text-align: center;
+  border-top: 1px solid rgba(244, 209, 118, 0.34);
+}
+
+.share-copy {
+  color: rgba(255, 244, 220, 0.74);
+  line-height: 1.7;
+  margin-top: 0;
+}
+
+.share-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 22px;
+  border: 1px solid rgba(244, 209, 118, 0.34);
+  border-radius: 999px;
+  color: #fff4dc;
+  background: rgba(255, 244, 220, 0.09);
+  font: 800 0.92rem/1 "Manrope", sans-serif;
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.share-btn:hover {
+  transform: translateY(-3px);
+  border-color: rgba(244, 209, 118, 0.6);
+  background: rgba(255, 244, 220, 0.14);
+}
+
+.share-btn svg {
+  flex-shrink: 0;
+}
+
+.share-status {
+  min-height: 24px;
+  margin: 14px 0 0;
+  color: #f4d176;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .share-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .share-btn {
+    width: 100%;
+  }
+}
+
 :root {
   --ink: #16100d;
   --night: #21150f;

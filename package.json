@@ -1,0 +1,12 @@
+{
+  "name": "ckwedding2026",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@netlify/database": "*",
+    "drizzle-orm": "beta"
+  },
+  "devDependencies": {
+    "drizzle-kit": "beta"
+  }
+}
