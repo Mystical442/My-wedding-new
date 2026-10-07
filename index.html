@@ -42,11 +42,8 @@
       <li><a href="#party">Wedding Party</a></li>
       <li><a href="#stay">Stay</a></li>
       <li><a href="#gifting">Gifting</a></li>
-      <li><a href="#rsvp">RSVP</a></li>
     </ul>
   </nav>
-
-  <a href="#rsvp" class="floating-btn">RSVP</a>
 
   <main>
     <section id="home" class="hero section-shell reveal">
@@ -84,7 +81,6 @@
 
         <p class="hero-location">Holiday Inn Newport News-Hampton Ballroom, 980 Omni Blvd, Newport News, VA 23606</p>
         <div class="hero-actions" aria-label="Wedding actions">
-          <a class="primary-action" href="#rsvp">Reserve Your Seat</a>
           <a class="secondary-action" href="#stay">Plan Your Stay</a>
         </div>
         <a class="story-cue" href="#party" aria-label="View more invitation details">View the celebration details</a>
@@ -222,58 +218,6 @@
       </div>
     </section>
 
-    <section class="share-section section-shell reveal" aria-label="Share the invitation">
-      <div class="section-heading">
-        <p class="eyebrow">Spread the word</p>
-        <h2>Share This Invitation</h2>
-      </div>
-      <p class="share-copy">Help us celebrate — share this invitation with friends and family.</p>
-      <div class="share-actions">
-        <button type="button" class="share-btn share-native" id="share-native" aria-label="Share invitation">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-          Share Invitation
-        </button>
-        <button type="button" class="share-btn share-copy" id="share-copy" aria-label="Copy invitation link">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-          Copy Link
-        </button>
-      </div>
-      <p class="share-status" id="share-status" role="status" aria-live="polite"></p>
-    </section>
-
-    <section id="rsvp" class="rsvp-section section-shell reveal">
-      <div class="section-heading">
-        <p class="eyebrow">Be part of the day</p>
-        <h2>RSVP</h2>
-      </div>
-
-      <form name="wedding-rsvp" method="POST" action="/thankyou.html" data-netlify="true" netlify-honeypot="bot-field" class="rsvp-form" id="rsvp-form">
-        <input type="hidden" name="form-name" value="wedding-rsvp">
-        <p class="hidden-field">
-          <label>Do not fill this out: <input name="bot-field"></label>
-        </p>
-
-        <label>
-          <span>Your name</span>
-          <input type="text" name="name" autocomplete="name" required>
-        </label>
-        <label>
-          <span>Email</span>
-          <input type="email" name="email" autocomplete="email" required>
-        </label>
-        <label>
-          <span>Number attending</span>
-          <input type="number" name="attendees" min="1" max="12" value="1" required>
-        </label>
-        <label class="wide-field">
-          <span>Guest names or note</span>
-          <textarea name="message" placeholder="List all attendees or share a note"></textarea>
-        </label>
-
-        <button type="submit" class="submit-btn">Submit RSVP</button>
-        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-      </form>
-    </section>
   </main>
 
   <div class="kente-border bottom" aria-hidden="true"></div>
